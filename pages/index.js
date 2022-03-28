@@ -1,8 +1,24 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AutoRental",
+    name: "Viaventuro",
+    email: "seppe.alaerts21@gmail.com",
+    telephone: "+324 71 44 07 14",
+    description: "Op reis met de legendarische Volkswagen California T6.1",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Konijnenpijp 94",
+      addressLocality: "Lommel",
+      postalCode: "3920",
+      addressCountry: "Belgium",
+    },
+    url: "https://viaventuro.be",
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,19 +28,27 @@ export default function Home() {
           content="Op reis met de legendarische Volkswagen California."
         />
         <link rel="icon" href="/favicon.ico" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Coming soon...</h1>
+        <h1 className={styles.title}>Coming very soon...</h1>
 
         <p className={styles.description}>
-          Op reis met de meest legendarische camper ter wereld? <br /> Maak
-          kennis met onze Volkswagen California T6.1!
+          Maak binnenkort kennis met onze gloednieuwe Volkswagen California
+          T6.1!
         </p>
 
         <div className={styles.grid}>
           <a
             href="https://www.goboony.com/campers/belgium/limburg/lommel/17034"
+            w
             target="_blank"
             rel="noreferrer"
             className={styles.card}
