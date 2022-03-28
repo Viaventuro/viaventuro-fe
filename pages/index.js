@@ -48,7 +48,6 @@ export default function Home() {
         <div className={styles.grid}>
           <a
             href="https://www.goboony.com/campers/belgium/limburg/lommel/17034"
-            w
             target="_blank"
             rel="noreferrer"
             className={styles.card}
