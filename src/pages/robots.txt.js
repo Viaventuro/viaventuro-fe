@@ -1,6 +1,4 @@
-export default function Robots() {
-  return '';
-}
+export default function Robots() {}
 
 export async function getServerSideProps({ res }) {
   if (!process.env.SITE_URL) {
