@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-icons": "node ./script/generate-icons.js --inputFolder=./src/assets/icons/custom/ --outputFile=./src/assets/icons/index.js && npx eslint ./src/assets/icons/index.js --quiet --fix"
   },
   "dependencies": {
     "next": "12.1.4",
