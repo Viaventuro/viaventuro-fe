@@ -6,15 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-icons": "node ./script/generate-icons.js --inputFolder=./src/assets/icons/custom/ --outputFile=./src/assets/icons/index.js && npx eslint ./src/assets/icons/index.js --quiet --fix"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "12.1.4",
+    "next-translate": "^1.3.5",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4"
+    "eslint-config-next": "12.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "sass": "^1.37.5",
+    "sass-loader": "10.1.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }

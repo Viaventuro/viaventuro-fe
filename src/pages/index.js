@@ -1,32 +1,29 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import styles from '../../styles/Home.module.css';
 
 export default function Home() {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "AutoRental",
-    name: "Viaventuro",
-    email: "seppe.alaerts21@gmail.com",
-    telephone: "+324 71 44 07 14",
-    description: "Op reis met de legendarische Volkswagen California T6.1",
+    '@context': 'https://schema.org',
+    '@type': 'AutoRental',
+    name: 'Viaventuro',
+    email: 'seppe.alaerts21@gmail.com',
+    telephone: '+324 71 44 07 14',
+    description: 'Op reis met de legendarische Volkswagen California T6.1',
     address: {
-      "@type": "PostalAddress",
-      streetAddress: "Konijnenpijp 94",
-      addressLocality: "Lommel",
-      postalCode: "3920",
-      addressCountry: "Belgium",
+      '@type': 'PostalAddress',
+      streetAddress: 'Konijnenpijp 94',
+      addressLocality: 'Lommel',
+      postalCode: '3920',
+      addressCountry: 'Belgium',
     },
-    url: "https://viaventuro.be",
+    url: 'https://viaventuro.be',
   };
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Viaventuro</title>
-        <meta
-          name="description"
-          content="Op reis met de legendarische Volkswagen California."
-        />
+        <meta name="description" content="Op reis met de legendarische Volkswagen California." />
         <link rel="icon" href="/favicon.ico" />
 
         <script
@@ -41,8 +38,7 @@ export default function Home() {
         <h1 className={styles.title}>Coming very soon...</h1>
 
         <p className={styles.description}>
-          Maak binnenkort kennis met onze gloednieuwe Volkswagen California
-          T6.1!
+          Maak binnenkort kennis met onze gloednieuwe Volkswagen California T6.1!
         </p>
 
         <div className={styles.grid}>
@@ -68,9 +64,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        &copy; Viaventuro {new Date().getFullYear()}
-      </footer>
+      <footer className={styles.footer}>&copy; Viaventuro {new Date().getFullYear()}</footer>
     </div>
   );
 }
