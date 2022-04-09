@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import { getHomePageData } from '@/lib/api/home';
 import styles from '../../styles/Home.module.css';
 
-export default function Home() {
+const Home = ({ data, preview }) => {
+  console.log(data);
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
@@ -67,4 +69,22 @@ export default function Home() {
       <footer className={styles.footer}>&copy; Viaventuro {new Date().getFullYear()}</footer>
     </div>
   );
+};
+
+export default Home;
+
+export async function getServerSideProps({
+  params,
+  locale = 'nl',
+  defaultLocale,
+  preview = false,
+}) {
+  const data = await getHomePageData(locale, preview);
+
+  return {
+    props: {
+      data,
+      preview,
+    },
+  };
 }
