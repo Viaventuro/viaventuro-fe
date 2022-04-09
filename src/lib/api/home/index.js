@@ -17,7 +17,7 @@ export async function getHomePageData(locale, preview) {
     preview,
   });
 
-  if (!response.homepage) {
+  if (!response.homePage) {
     return null;
   }
 
