@@ -1,7 +1,6 @@
-import Head from 'next/head';
 import { getHomePageData } from '@/lib/api/home';
-import styles from '../../styles/Home.module.css';
-import Blocks from '@/components/organisms/blocks';
+import Blocks from '@/components/organisms/Blocks';
+import BaseLayout from '@/layouts/Base';
 
 export default function Home({ data, preview }) {
   const structuredData = {
@@ -22,33 +21,13 @@ export default function Home({ data, preview }) {
   };
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Viaventuro</title>
-        <meta name="description" content="Op reis met de legendarische Volkswagen California." />
-        <link rel="icon" href="/favicon.ico" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      </Head>
-
+    <BaseLayout structuredData={structuredData}>
       <Blocks content={data?.homePage?.content} />
-
-      <footer className={styles.footer}>&copy; Viaventuro {new Date().getFullYear()}</footer>
-    </div>
+    </BaseLayout>
   );
 }
 
-export async function getServerSideProps({
-  params,
-  locale = 'nl',
-  defaultLocale,
-  preview = false,
-}) {
+export async function getServerSideProps({ locale = 'nl', preview = false }) {
   const data = await getHomePageData(locale, preview);
 
   return {
