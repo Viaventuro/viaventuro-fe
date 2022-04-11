@@ -1,5 +1,5 @@
+import Button from '@/components/atoms/Button';
 import Title from '@/components/atoms/Title';
-import Link from 'next/link';
 import { StructuredText } from 'react-datocms';
 import styles from './LandingBlock.module.scss';
 
@@ -9,11 +9,7 @@ const LandingBlock = ({ title, body, callToAction }) => {
       <Title title={title} modUppercase />
       <StructuredText data={body} />
       {callToAction.map((cta, i) => {
-        return (
-          <Link key={i} href={cta.externalLink}>
-            <a>{cta.label}</a>
-          </Link>
-        );
+        return <Button key={i} label={cta.label} href={cta.externalLink} modlink></Button>;
       })}
     </div>
   );
