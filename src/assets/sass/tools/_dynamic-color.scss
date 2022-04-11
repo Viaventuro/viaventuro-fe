@@ -1,0 +1,5 @@
+@mixin dynamicColor($color, $backupColor) {
+  color: var($color, $backupColor);
+  transition: color 300ms ease-in-out;
+  will-change: color;
+}

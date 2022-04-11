@@ -1,0 +1,182 @@
+@use './tools' as tools;
+
+// ------------------------------------ //
+// Font Imports                         //
+// ------------------------------------ //
+
+// Intro
+
+@font-face {
+  font-family: 'intro';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/intro/Intro300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'intro';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/intro/Intro400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'intro';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/intro/Intro700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'intro';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/intro/Intro900.woff2') format('woff2');
+}
+
+// Quincy CF
+
+@font-face {
+  font-family: 'quincy-cf';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/quincy-cf/QuincyCF300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quincy-cf';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/quincy-cf/QuincyCF400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quincy-cf';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/quincy-cf/QuincyCF700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quincy-cf';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/quincy-cf/QuincyCF900.woff2') format('woff2');
+}
+
+// ------------------------------------ //
+// Font Declarations                    //
+// ------------------------------------ //
+
+// Family Declarations
+$font-family-title: 'intro', sans-serif;
+$font-family-text: 'quincy-cf', serif;
+
+$font-titles-map: (
+  h1: (
+    size: #{tools.rem(56)},
+    size-m: #{tools.rem(44)},
+    size-s: #{tools.rem(32)},
+    space: 0.05em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-title,
+    text-transform: uppercase,
+    letter-spacing: #{tools.rem(1.5)},
+  ),
+  h2: (
+    size: #{tools.rem(56)},
+    size-m: #{tools.rem(44)},
+    size-s: #{tools.rem(32)},
+    space: 0.5em,
+    weight: 400,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  'h2-uppercase': (
+    size: #{tools.rem(40)},
+    size-m: #{tools.rem(36)},
+    size-s: #{tools.rem(24)},
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-title,
+    text-transform: uppercase,
+  ),
+  h3: (
+    size: #{tools.rem(32)},
+    size-m: #{tools.rem(28)},
+    size-s: #{tools.rem(24)},
+    space: 0.5em,
+    weight: 700,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  'h3-uppercase': (
+    size: #{tools.rem(24)},
+    size-s: #{tools.rem(20)},
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-title,
+    text-transform: uppercase,
+  ),
+  h4: (
+    size: #{tools.rem(24)},
+    size-s: #{tools.rem(20)},
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  h5: (
+    size: #{tools.rem(20)},
+    size-s: tools.font-ratio(tools.rem(20)),
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  h6: (
+    size: #{tools.rem(18)},
+    size-s: tools.font-ratio(tools.rem(18)),
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+);
+
+// Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+// Sizes
+$font-size-default: tools.rem(18);
+$font-size-large: tools.rem(20);
+
+// Letter Spacings
+$letter-spacing-uppercase: 0.05em;
+
+// Exporting the font settings to make them readable for Storybook page
+:export {
+  // Family Declarations
+  font-family-text: $font-family-text;
+  font-family-title: $font-family-title;
+
+  // Weights
+  font-weight-bold: $font-weight-bold;
+  font-weight-extra-bold: $font-weight-extra-bold;
+  font-weight-light: $font-weight-light;
+  font-weight-regular: $font-weight-regular;
+}
