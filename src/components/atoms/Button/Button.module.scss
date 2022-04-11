@@ -27,6 +27,10 @@
     margin-top: tools.rem(2);
   }
 
+  &:hover .button__label__arrow {
+    animation: arrowAnim 1100ms;
+  }
+
   &--primary {
     background-color: $color-black;
     color: $color-white;
@@ -57,5 +61,31 @@
     &:focus {
       outline: tools.rem(2) solid $color-black;
     }
+  }
+}
+
+.button__label__arrow {
+  display: inline-block;
+  font-size: 110%;
+}
+
+@keyframes arrowAnim {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(tools.rem(4));
+  }
+  70% {
+    transform: translateX(0);
+  }
+  85% {
+    transform: translateX(tools.rem(4));
+  }
+  100% {
+    transform: translateX(0);
   }
 }

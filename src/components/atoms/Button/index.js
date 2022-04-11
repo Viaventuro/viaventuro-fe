@@ -3,21 +3,25 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import styles from './Button.module.scss';
 
-const Button = ({ label, variant, modLink, href, className, ...props }) => {
+const Button = ({ label, variant, modLink, modWithArrow, href, className, ...props }) => {
   const buttonClassNames = classNames([styles['button'], styles[`button--${variant}`], className]);
 
   if (modLink) {
     return (
       <Link href={href}>
         <a className={buttonClassNames} {...props}>
-          <span className={styles['button__label']}>{label}</span>
+          <span className={styles['button__label']}>
+            {label} {modWithArrow && <span className={styles['button__label__arrow']}> &gt;</span>}
+          </span>
         </a>
       </Link>
     );
   }
   return (
     <button className={buttonClassNames} {...props}>
-      <span className={styles['button__label']}>{label}</span>
+      <span className={styles['button__label']}>
+        {label} {modWithArrow && <span className={styles['button__label__arrow']}> &gt;</span>}
+      </span>
     </button>
   );
 };

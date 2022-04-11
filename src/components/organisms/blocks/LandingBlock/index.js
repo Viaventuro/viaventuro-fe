@@ -17,7 +17,7 @@ const LandingBlock = ({ title, body, callToAction }) => {
           <StructuredText data={body} />
         </span>
         {callToAction.map((cta, i) => {
-          return <Button key={i} label={`${cta.label}`} href={cta.externalLink} modLink></Button>;
+          return <Button key={i} label={cta.label} href={cta.externalLink} modLink modWithArrow />;
         })}
       </div>
     </section>
