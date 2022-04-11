@@ -38,7 +38,9 @@
     }
 
     &:focus {
-      outline: tools.rem(2) solid $color-black;
+      outline: none;
+      background-color: $color-white;
+      color: $color-black;
     }
   }
 
