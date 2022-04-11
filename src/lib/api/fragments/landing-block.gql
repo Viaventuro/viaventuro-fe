@@ -6,7 +6,7 @@ fragment LandingBlock on LandingBlockRecord {
     value
   }
   callToAction {
-    buttonLabel
+    label
     externalLink
   }
 }
