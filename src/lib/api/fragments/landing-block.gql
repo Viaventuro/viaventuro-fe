@@ -8,5 +8,6 @@ fragment LandingBlock on LandingBlockRecord {
   callToAction {
     label
     externalLink
+    targetBlank
   }
 }
