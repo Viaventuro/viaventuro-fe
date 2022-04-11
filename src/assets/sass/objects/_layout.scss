@@ -1,12 +1,6 @@
 @use '../settings/' as *;
 @use '../tools/' as *;
 
-:root {
-  --cz-purple-dark: #{$color-purple-dark};
-  --cz-text-color: #{$color-black};
-  --cz-grey-light: #{$color-grey-light};
-}
-
 .vv-layout {
   max-width: 100%;
   padding: 0 $spacing-20;

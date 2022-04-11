@@ -1,5 +1,7 @@
-function MyApp({ Component, pageProps }) {
+import '@/assets/sass/index.scss';
+
+function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default App;
