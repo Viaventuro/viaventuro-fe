@@ -7,9 +7,37 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+
+  @include tools.respond-from(large) {
+    padding-bottom: tools.rem(200);
+  }
 }
 
 .landing-block__body {
   font-size: tools.rem(20);
-  margin-bottom: tools.rem(20);
+  margin: tools.rem(10) 0 tools.rem(20);
+  text-align: center;
+
+  @include tools.respond-up-to(medium) {
+    max-width: tools.rem(500);
+  }
+}
+
+.landing-block__logo__container {
+  display: block;
+  transform: rotate(-15deg);
+  height: tools.rem(400);
+  width: tools.rem(600);
+
+  @include tools.respond-up-to(large) {
+    display: none;
+  }
+}
+
+.landing-block__logo {
+  display: flex;
+  filter: opacity(0.2);
+  transform: scale(0.35);
+  z-index: 5;
 }

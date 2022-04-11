@@ -16,7 +16,9 @@ const BaseLayout = ({ children, structuredData }) => {
           }}
         />
       </Head>
-      <main>{children}</main>
+      <main className="main" id="main">
+        {children}
+      </main>
       <Footer />
     </>
   );
