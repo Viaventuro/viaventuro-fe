@@ -3,6 +3,7 @@ import { print } from 'graphql';
 const API_TOKEN = process.env.DATOCMS_API_TOKEN ?? '';
 
 async function fetchAPI(query, { variables, preview } = {}) {
+  console.log(API_TOKEN);
   const res = await fetch(
     `https://graphql.datocms.com${
       process.env.DATOCMS_ENVIRONMENT ? `/environments/${process.env.DATOCMS_ENVIRONMENT}` : ''
