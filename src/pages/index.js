@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { getHomePageData } from '@/lib/api/home';
 import styles from '../../styles/Home.module.css';
+import Blocks from '@/components/organisms/blocks';
 
 export default function Home({ data, preview }) {
   const structuredData = {
@@ -34,6 +35,8 @@ export default function Home({ data, preview }) {
           }}
         />
       </Head>
+
+      <Blocks content={data?.homePage?.content} />
 
       <main className={styles.main}>
         <h1 className={styles.title}>Coming very soon...</h1>

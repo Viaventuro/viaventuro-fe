@@ -1,0 +1,12 @@
+fragment LandingBlock on LandingBlockRecord {
+  type: _modelApiKey
+  title
+  subtitle
+  body {
+    value
+  }
+  callToAction {
+    buttonLabel
+    externalLink
+  }
+}

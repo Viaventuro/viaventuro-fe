@@ -1,10 +1,18 @@
 import gql from 'graphql-tag';
 import fetchApi from '@/api/datocms';
 
+import LANDING_BLOCK_FRAGMENT from '../fragments/landing-block.gql';
+
 const PAGE_QUERY = gql`
+  ${LANDING_BLOCK_FRAGMENT}
+
   query getHomepage {
     homePage {
       id
+      content {
+        __typename
+        ...LandingBlock
+      }
     }
   }
 `;

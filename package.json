@@ -10,6 +10,7 @@
     "generate-icons": "node ./script/generate-icons.js --inputFolder=./src/assets/icons/custom/ --outputFile=./src/assets/icons/index.js && npx eslint ./src/assets/icons/index.js --quiet --fix"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
