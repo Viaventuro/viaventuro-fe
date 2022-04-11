@@ -1,5 +1,5 @@
 import { getHomePageData } from '@/lib/api/home';
-import Blocks from '@/components/organisms/Blocks';
+import Blocks from '@/components/organisms/blocks';
 import BaseLayout from '@/layouts/base';
 
 export default function Home({ data, preview }) {
