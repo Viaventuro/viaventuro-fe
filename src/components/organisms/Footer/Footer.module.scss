@@ -1,3 +1,6 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
 .footer {
   display: flex;
   flex: 1;
@@ -5,4 +8,5 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  font-family: $font-family-title;
 }

@@ -1,3 +1,6 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
 .landing-block {
   display: flex;
   flex-direction: column;
