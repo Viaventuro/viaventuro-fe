@@ -1,6 +1,6 @@
 import { getHomePageData } from '@/lib/api/home';
 import Blocks from '@/components/organisms/Blocks';
-import BaseLayout from '@/layouts/Base';
+import BaseLayout from '@/layouts/base';
 
 export default function Home({ data, preview }) {
   const structuredData = {
