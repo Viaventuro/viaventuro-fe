@@ -8,6 +8,12 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
+  padding-top: tools.rem(50);
+
+  @include tools.respond-from(medium) {
+    padding-top: 0;
+    padding-bottom: tools.rem(200);
+  }
 
   @include tools.respond-from(large) {
     padding-bottom: tools.rem(200);
@@ -16,7 +22,7 @@
 
 .landing-block__body {
   font-size: tools.rem(20);
-  margin: tools.rem(10) 0 tools.rem(20);
+  margin: tools.rem(10) tools.rem(20) tools.rem(20);
   text-align: center;
 
   @include tools.respond-up-to(medium) {
@@ -30,7 +36,7 @@
   height: tools.rem(400);
   width: tools.rem(600);
 
-  @include tools.respond-up-to(large) {
+  @include tools.respond-up-to(medium) {
     display: none;
   }
 }
