@@ -4,27 +4,27 @@
 
 ## Getting Started
 
-1\. Copy `.env.example` to `.env`.
+1. Copy `.env.example` to `.env`.
 
-2\. Install dependencies:
+2. Install dependencies:
 
 ```bash
 yarn install
 ```
 
-3\. Generate icons:
+3. Generate icons:
 
 ```bash
 yarn generate-icons
 ```
 
-4\. Run the development server:
+4. Run the development server:
 
 ```bash
 yarn dev
 ```
 
-5\. Open [http://localhost:3000](http://localhost:3000) in a browser.
+5. Open [http://localhost:3000](http://localhost:3000) in a browser.
 
 ## Links
 
