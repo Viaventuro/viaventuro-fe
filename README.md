@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-1\. Copy `.env.example` to `.env`
+1\. Copy `.env.example` to `.env`.
 
 2\. Install dependencies:
 
@@ -24,7 +24,7 @@ yarn generate-icons
 yarn dev
 ```
 
-5\. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5\. Open [http://localhost:3000](http://localhost:3000) in a browser.
 
 ## Links
 
