@@ -1,0 +1,27 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as *;
+
+.title {
+  display: block;
+  color: $color-black;
+
+  @each $level, $size-info in $font-titles-map {
+    &--#{$level} {
+      display: block;
+
+      @include title($level, $font-family-title, $font-titles-map);
+    }
+  }
+
+  &--light {
+    color: $color-white;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}

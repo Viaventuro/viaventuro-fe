@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import styles from '../../styles/Home.module.css';
+import { getHomePageData } from '@/lib/api/home';
+import Blocks from '@/components/organisms/blocks';
+import BaseLayout from '@/layouts/base';
 
-export default function Home() {
+export default function Home({ data, preview }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
@@ -20,51 +21,19 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Viaventuro</title>
-        <meta name="description" content="Op reis met de legendarische Volkswagen California." />
-        <link rel="icon" href="/favicon.ico" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>Coming very soon...</h1>
-
-        <p className={styles.description}>
-          Maak binnenkort kennis met onze gloednieuwe Volkswagen California T6.1!
-        </p>
-
-        <div className={styles.grid}>
-          <a
-            href="https://www.goboony.com/campers/belgium/limburg/lommel/17034"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.card}
-          >
-            <h2>Sneak preview &rarr;</h2>
-            <p>Neem al eens een kijkje op onze GoBoony pagina.</p>
-          </a>
-
-          <a
-            href="https://www.volkswagen-commercial-vehicles.be/nl/modellen/california-6-1.html"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.card}
-          >
-            <h2>De California T6.1 &rarr;</h2>
-            <p>Meer over de California T6.1 op de website van VW.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>&copy; Viaventuro {new Date().getFullYear()}</footer>
-    </div>
+    <BaseLayout structuredData={structuredData}>
+      <Blocks content={data?.homePage?.content} />
+    </BaseLayout>
   );
+}
+
+export async function getServerSideProps({ locale = 'nl', preview = false }) {
+  const data = await getHomePageData(locale, preview);
+
+  return {
+    props: {
+      data,
+      preview,
+    },
+  };
 }

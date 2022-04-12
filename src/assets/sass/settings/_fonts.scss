@@ -1,0 +1,78 @@
+@use './tools' as tools;
+
+// ------------------------------------ //
+// Font Declarations                    //
+// ------------------------------------ //
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;700;800&family=Mandali&display=swap');
+
+// Family Declarations
+$font-family-title: 'Baloo Da 2', sans-serif;
+$font-family-text: 'Mandali', sans-serif;
+
+$font-titles-map: (
+  h1: (
+    size: #{tools.rem(56)},
+    size-m: #{tools.rem(44)},
+    size-s: #{tools.rem(32)},
+    space: 0.05em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-title,
+  ),
+  h2: (
+    size: #{tools.rem(56)},
+    size-m: #{tools.rem(44)},
+    size-s: #{tools.rem(32)},
+    space: 0.5em,
+    weight: 400,
+    line-height: 1.2,
+    font-family: $font-family-title,
+  ),
+  h3: (
+    size: #{tools.rem(32)},
+    size-m: #{tools.rem(28)},
+    size-s: #{tools.rem(24)},
+    space: 0.5em,
+    weight: 700,
+    line-height: 1.2,
+    font-family: $font-family-title,
+  ),
+  h4: (
+    size: #{tools.rem(24)},
+    size-s: #{tools.rem(20)},
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  h5: (
+    size: #{tools.rem(20)},
+    size-s: tools.font-ratio(tools.rem(20)),
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+  h6: (
+    size: #{tools.rem(18)},
+    size-s: tools.font-ratio(tools.rem(18)),
+    space: 0.5em,
+    weight: 900,
+    line-height: 1.2,
+    font-family: $font-family-text,
+  ),
+);
+
+// Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+// Sizes
+$font-size-default: tools.rem(18);
+$font-size-large: tools.rem(20);
+
+// Letter Spacings
+$letter-spacing-uppercase: 0.05em;
