@@ -9,6 +9,14 @@ const PAGE_QUERY = gql`
   query getHomepage {
     homePage {
       id
+      slug
+      seo: _seoMetaTags {
+        tag
+        attributes
+        content
+      }
+      noindex
+      nofollow
       content {
         __typename
         ...LandingBlock

@@ -21,7 +21,7 @@ export default function Home({ data, preview }) {
   };
 
   return (
-    <BaseLayout structuredData={structuredData}>
+    <BaseLayout structuredData={structuredData} page={data?.homePage}>
       <Blocks content={data?.homePage?.content} />
     </BaseLayout>
   );
