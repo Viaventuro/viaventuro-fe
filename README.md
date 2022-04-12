@@ -26,9 +26,7 @@ yarn dev
 
 5\. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
-
 ## Links
 
-[Frontend Application](https://www.viaventuro.be)
-[Backend CMS](https://cms.viaventuro.be)
+- [Frontend Application](https://www.viaventuro.be)
+- [Backend CMS](https://cms.viaventuro.be)
