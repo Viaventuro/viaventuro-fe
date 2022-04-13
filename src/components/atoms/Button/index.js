@@ -22,8 +22,8 @@ const Button = ({
           className={buttonClassNames}
           {...props}
           target={modTargetBlank ? '_blank' : '_self'}
-          noopener={modTargetBlank.toString()}
-          noreferrer={modTargetBlank.toString()}
+          noopener={modTargetBlank?.toString()}
+          noreferrer={modTargetBlank?.toString()}
         >
           <span className={styles['button__label']}>
             {label} {modWithArrow && <span className={styles['button__label__arrow']}> &gt;</span>}
