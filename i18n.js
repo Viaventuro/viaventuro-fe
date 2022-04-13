@@ -4,7 +4,7 @@ module.exports = {
   locales: locales,
   defaultLocale: defaultLocale,
   pages: {
-    '*': ['common'],
+    '*': ['common', 'error'],
   },
   loadLocaleFrom: (lang, ns) => import(`./src/locales/${lang}/${ns}.json`).then((m) => m.default),
 };
