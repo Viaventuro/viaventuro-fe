@@ -4,8 +4,8 @@ import fetchApi from '@/api/datocms';
 const SLUG_QUERY = gql`
   {
     homePage {
-      _publishedAt
-      _allNoIndexLocales {
+      _updatedAt
+      _allNoindexLocales {
         locale
         value
       }
@@ -18,13 +18,13 @@ export async function getAllPagesSlugsWithLocalesForSitemap() {
 
   const out = [];
 
-  pageObject = {
-    _publishedAt: homePage._publishedAt,
+  const pageObject = {
+    _updatedAt: homePage._updatedAt,
     path: '/',
     slugs: [],
   };
 
-  homePage._allNoIndexLocales.forEach((object) => {
+  homePage._allNoindexLocales.forEach((object) => {
     // when noIndex is null or false, add to slugs array
     if (object.value) {
       return;
