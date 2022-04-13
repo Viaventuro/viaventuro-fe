@@ -6,8 +6,8 @@ import LANDING_BLOCK_FRAGMENT from '../fragments/landing-block.gql';
 const PAGE_QUERY = gql`
   ${LANDING_BLOCK_FRAGMENT}
 
-  query getHomepage {
-    homePage {
+  query getHomepage($locale: SiteLocale!) {
+    homePage(locale: $locale) {
       id
       slug
       seo: _seoMetaTags {

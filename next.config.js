@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextTranslate = require('next-translate');
+const { locales, defaultLocale } = require('./src/locales');
+
+module.exports = nextTranslate({
   reactStrictMode: true,
+  i18n: {
+    locales: locales,
+    defaultLocale: defaultLocale,
+  },
   webpack: (config) => {
     // GQL loader
     config.module.rules.push({
@@ -17,6 +23,4 @@ const nextConfig = {
 
     return config;
   },
-};
-
-module.exports = nextConfig;
+});

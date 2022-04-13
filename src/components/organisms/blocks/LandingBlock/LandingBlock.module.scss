@@ -9,6 +9,8 @@
   align-items: center;
   z-index: 10;
   padding-top: tools.rem(50);
+  padding-bottom: tools.rem(300);
+  overflow: hidden;
 
   @include tools.respond-from(medium) {
     padding-top: 0;
@@ -30,19 +32,17 @@
   }
 }
 
-.landing-block__logo__container {
-  display: block;
-  transform: rotate(-15deg);
-  height: tools.rem(400);
+.landing-block__logo__wrapper {
+  height: tools.rem(430);
   width: tools.rem(600);
 
   @include tools.respond-up-to(medium) {
-    display: none;
+    height: tools.rem(450);
+    width: tools.rem(600);
   }
 }
 
 .landing-block__logo {
-  display: flex;
   filter: opacity(0.4);
   transform: scale(0.35);
   z-index: 5;
