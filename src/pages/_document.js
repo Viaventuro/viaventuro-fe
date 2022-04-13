@@ -4,6 +4,7 @@ const Document = ({}) => {
   return (
     <Html>
       <Head>
+        {/* Start Google Analytics */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -20,6 +21,7 @@ const Document = ({}) => {
           `,
           }}
         />
+        {/* End Google Analytics */}
       </Head>
       <body>
         <Main />
