@@ -9,13 +9,16 @@ const LandingBlock = ({ title, body, callToAction }) => {
   return (
     <section className="vv-layout">
       <div className={styles['landing-block']}>
-        <div className={styles['landing-block__logo__container']}>
+        <div className={styles['landing-block__logo__wrapper']}>
           <Icon icon={IconLogo} className={styles['landing-block__logo']} />
         </div>
+
         <Title title={title} modUppercase modCenter />
+
         <span className={styles['landing-block__body']}>
           <StructuredText data={body} />
         </span>
+
         {callToAction.map((cta, i) => {
           return (
             <Button
