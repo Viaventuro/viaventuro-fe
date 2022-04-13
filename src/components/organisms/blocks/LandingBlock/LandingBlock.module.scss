@@ -32,8 +32,7 @@
 
 .landing-block__logo__container {
   display: block;
-  transform: rotate(-15deg);
-  height: tools.rem(400);
+  height: tools.rem(430);
   width: tools.rem(600);
 
   @include tools.respond-up-to(medium) {
