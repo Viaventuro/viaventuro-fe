@@ -1,5 +1,6 @@
 {
   "Error": "Error",
   "PageDoesNotExist": "This page doesn't seem to exist",
-  "BackToHome": "Back to home"
+  "BackToHome": "Back to home",
+  "SomethingWentWrong": "Something went wrong. Please try again later."
 }

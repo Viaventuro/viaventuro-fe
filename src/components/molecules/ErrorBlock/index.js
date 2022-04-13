@@ -16,8 +16,7 @@ const ErrorBlock = ({ title, subTitle, ctaLabel, ctaLink }) => {
         <Title title={title} modUppercase modCenter />
 
         <span className={styles['error-block__body']}>{subTitle}</span>
-
-        <Button label={ctaLabel} href={ctaLink} modLink modWithArrow />
+        {ctaLabel && ctaLink && <Button label={ctaLabel} href={ctaLink} modLink modWithArrow />}
       </div>
     </section>
   );
