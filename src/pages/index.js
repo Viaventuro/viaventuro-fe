@@ -2,7 +2,7 @@ import { getHomePageData } from '@/lib/api/home';
 import Blocks from '@/components/organisms/blocks';
 import BaseLayout from '@/layouts/base';
 
-export default function Home({ data, preview }) {
+export default function Home({ data }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
@@ -17,6 +17,7 @@ export default function Home({ data, preview }) {
       postalCode: '3920',
       addressCountry: 'Belgium',
     },
+    logo: 'https://www.viaventuro.be/assets/images/viaventuro.png',
     url: 'https://www.viaventuro.be',
   };
 

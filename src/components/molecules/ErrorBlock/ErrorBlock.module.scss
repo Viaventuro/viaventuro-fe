@@ -1,0 +1,49 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
+.error-block {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding-top: tools.rem(50);
+  padding-bottom: tools.rem(300);
+  overflow: hidden;
+
+  @include tools.respond-from(medium) {
+    padding-top: 0;
+    padding-bottom: tools.rem(200);
+  }
+
+  @include tools.respond-from(large) {
+    padding-bottom: tools.rem(200);
+  }
+}
+
+.error-block__body {
+  font-size: tools.rem(20);
+  margin: 0 tools.rem(20) tools.rem(20);
+  text-align: center;
+
+  @include tools.respond-up-to(medium) {
+    max-width: tools.rem(500);
+  }
+}
+
+.error-block__logo__wrapper {
+  height: tools.rem(430);
+  width: tools.rem(600);
+
+  @include tools.respond-up-to(medium) {
+    height: tools.rem(450);
+    width: tools.rem(600);
+  }
+}
+
+.error-block__logo {
+  filter: opacity(0.4);
+  transform: scale(0.35);
+  z-index: 5;
+}
