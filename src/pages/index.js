@@ -17,6 +17,7 @@ export default function Home({ data }) {
       postalCode: '3920',
       addressCountry: 'Belgium',
     },
+    logo: 'https://www.viaventuro.be/assets/images/viaventuro.png',
     url: 'https://www.viaventuro.be',
   };
 
