@@ -3,7 +3,6 @@ import Blocks from '@/components/organisms/blocks';
 import BaseLayout from '@/layouts/base';
 
 export default function Home({ data }) {
-  console.log(data);
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
