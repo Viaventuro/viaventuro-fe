@@ -40,9 +40,9 @@ const PAGE_QUERY = gql`
         __typename
         ...LandingBlock
       }
-      general(locale: $locale) {
-        ...GeneralFields
-      }
+    }
+    general(locale: $locale) {
+      ...GeneralFields
     }
   }
 `;

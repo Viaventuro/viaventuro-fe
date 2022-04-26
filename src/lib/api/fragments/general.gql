@@ -5,7 +5,7 @@ fragment GeneralFields on GeneralRecord {
     ...NavigationFaqItem
     ...NavigationAboutItem
   }
-  footerNavigation {
+  footerNav {
     ...NavigationCookiesItem
     ...NavigationPrivacyItem
     ...NavigationTermsItem
