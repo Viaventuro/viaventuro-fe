@@ -17,6 +17,7 @@ const PAGE_QUERY = gql`
       }
       noindex
       nofollow
+      hideNavigation
       content {
         __typename
         ...LandingBlock
