@@ -14,7 +14,7 @@ const BaseLayout = ({ children, structuredData, page, slug }) => {
         noFollow={nofollow}
         slug={slug}
       />
-      {page.hideNavigation && <Navigation />}
+      {!page.hideNavigation && <Navigation />}
       <main className="main" id="main">
         {children}
       </main>
