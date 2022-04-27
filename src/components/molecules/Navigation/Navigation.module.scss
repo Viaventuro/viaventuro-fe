@@ -1,0 +1,12 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
+.navigation__list {
+  padding: 0;
+  display: flex;
+}
+
+.navigation__list__item {
+  list-style-type: none;
+  margin: 0 tools.rem(10);
+}
