@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { GeneralContext } from '@/context/GeneralContext';
 import styles from './NavigationBar.module.scss';
 import Link from 'next/link';
+import Navigation from '@/components/molecules/Navigation';
 
 const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
@@ -16,19 +17,9 @@ const NavigationBar = ({}) => {
     : [];
 
   return (
-    <nav>
-      <ul>
-        {navigation.map((nav, i) => {
-          return (
-            <li key={i}>
-              <Link href={`/${nav.slug}`}>
-                <a>{nav.label}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <header className={styles['navigation-bar']}>
+      <Navigation navigation={navigation} />
+    </header>
   );
 };
 

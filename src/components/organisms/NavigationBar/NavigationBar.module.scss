@@ -1,2 +1,9 @@
 @use '@/assets/sass/settings/' as *;
 @use '@/assets/sass/tools/' as tools;
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  height: tools.rem(90);
+  box-shadow: 0 0 tools.rem(10) 0 $color-black;
+}
