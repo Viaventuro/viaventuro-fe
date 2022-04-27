@@ -1,0 +1,15 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
+.navbutton {
+  text-decoration: none;
+  color: $color-black;
+
+  &--cta {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    padding: tools.rem(7) tools.rem(25);
+    border: tools.rem(2) solid $color-black;
+    border-radius: tools.rem(30);
+  }
+}
