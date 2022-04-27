@@ -3,13 +3,36 @@
 
 .navbutton {
   text-decoration: none;
+  text-transform: uppercase;
   color: $color-black;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-uppercase;
 
   &--cta {
-    text-transform: uppercase;
-    font-weight: $font-weight-bold;
-    padding: tools.rem(7) tools.rem(25);
-    border: tools.rem(2) solid $color-black;
-    border-radius: tools.rem(30);
+    display: flex;
+    min-height: tools.rem(48);
+    flex-direction: row;
+    align-items: center;
+    background-color: $color-black;
+    color: $color-white;
+    border: tools.rem(3) solid $color-black;
+    border-radius: tools.rem(50);
+    cursor: pointer;
+    padding: tools.rem(14.5) tools.rem(32);
+    width: fit-content;
+    text-decoration: none;
+    transition: background-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $color-white;
+      color: $color-black;
+    }
   }
 }
