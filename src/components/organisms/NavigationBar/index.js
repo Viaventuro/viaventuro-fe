@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { GeneralContext } from '@/context/GeneralContext';
-import styles from './Navigation.module.scss';
+import styles from './NavigationBar.module.scss';
 import Link from 'next/link';
 
-const Navigation = ({}) => {
+const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
 
   const navigation = general?.navigation
@@ -32,4 +32,4 @@ const Navigation = ({}) => {
   );
 };
 
-export default Navigation;
+export default NavigationBar;
