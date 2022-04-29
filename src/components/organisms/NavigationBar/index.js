@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { GeneralContext } from '@/context/GeneralContext';
 import styles from './NavigationBar.module.scss';
-import Link from 'next/link';
 import Navigation from '@/components/molecules/Navigation';
 
 const NavigationBar = ({}) => {
