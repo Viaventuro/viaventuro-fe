@@ -12,7 +12,7 @@
   "dependencies": {
     "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
-    "graphql": "^16.3.0",
+    "graphql": "^16.4.0",
     "graphql-tag": "^2.12.6",
     "next": "12.1.5",
     "next-translate": "^1.4.0",
