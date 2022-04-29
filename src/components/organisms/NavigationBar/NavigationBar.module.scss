@@ -3,6 +3,7 @@
 
 .navigation-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: tools.rem(90);
   box-shadow: 0 0 tools.rem(10) 0 $color-black;

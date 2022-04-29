@@ -18,6 +18,7 @@ const NavigationBar = ({}) => {
 
   return (
     <header className={styles['navigation-bar']}>
+      [Logo]
       <Navigation navigation={navigation} />
     </header>
   );
