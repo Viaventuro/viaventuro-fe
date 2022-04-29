@@ -5,7 +5,6 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color-black;
-  font-weight: $font-weight-bold;
   letter-spacing: $letter-spacing-uppercase;
 
   &--cta {
@@ -21,6 +20,7 @@
     padding: tools.rem(14.5) tools.rem(32);
     width: fit-content;
     text-decoration: none;
+    font-weight: $font-weight-bold;
     transition: background-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
       color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
