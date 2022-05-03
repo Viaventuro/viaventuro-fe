@@ -8,7 +8,7 @@ const Navigation = ({ navigation }) => {
         {navigation.map((item, i) => {
           return (
             <li key={i} className={styles['navigation__list__item']}>
-              <NavButton label={item.label} href={item.href} />
+              <NavButton label={item.label} slug={item.slug} />
             </li>
           );
         })}

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+import classNames from 'classnames';
 import { GeneralContext } from '@/context/GeneralContext';
-import styles from './NavigationBar.module.scss';
 import Navigation from '@/components/molecules/Navigation';
+import styles from './NavigationBar.module.scss';
 
 const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
@@ -17,8 +18,10 @@ const NavigationBar = ({}) => {
 
   return (
     <header className={styles['navigation-bar']}>
-      [Logo]
-      <Navigation navigation={navigation} />
+      <span className={classNames([styles['navigation-bar__inner'], 'vv-layout'])}>
+        [Logo]
+        <Navigation navigation={navigation} />
+      </span>
     </header>
   );
 };
