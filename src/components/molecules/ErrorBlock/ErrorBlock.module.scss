@@ -32,18 +32,8 @@
   }
 }
 
-.error-block__logo__wrapper {
-  height: tools.rem(430);
-  width: tools.rem(600);
-
-  @include tools.respond-up-to(medium) {
-    height: tools.rem(450);
-    width: tools.rem(600);
-  }
-}
-
 .error-block__logo {
+  margin: tools.rem(150) 0 tools.rem(20);
   filter: opacity(0.4);
-  transform: scale(0.35);
-  z-index: 5;
+  height: tools.rem(300);
 }
