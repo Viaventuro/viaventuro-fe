@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { GeneralContext } from '@/context/GeneralContext';
 import Navigation from '@/components/molecules/Navigation';
 import styles from './NavigationBar.module.scss';
+import Icon from '@/components/atoms/Icon';
+import { IconLogo } from '@/assets/icons';
 
 const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
@@ -19,7 +21,7 @@ const NavigationBar = ({}) => {
   return (
     <header className={styles['navigation-bar']}>
       <span className={classNames([styles['navigation-bar__inner'], 'vv-layout'])}>
-        [Logo]
+        <Icon modBlock icon={IconLogo} className={styles['navigation-bar__logo']} />
         <Navigation navigation={navigation} />
       </span>
     </header>
