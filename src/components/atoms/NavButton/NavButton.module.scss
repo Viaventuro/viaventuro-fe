@@ -21,7 +21,7 @@
     background-color: $color-black;
     opacity: 1;
     transform: translate3d(-110%, 0, 0);
-    transition: transform $transition;
+    transition: all $transition;
   }
 
   &:hover:after,
@@ -43,7 +43,7 @@
     width: fit-content;
     text-decoration: none;
     font-weight: $font-weight-bold;
-    transition: background-color $transition;
+    transition: all $transition;
 
     &:hover {
       background-color: $color-white;
