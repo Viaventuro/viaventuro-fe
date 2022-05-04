@@ -23,7 +23,7 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
