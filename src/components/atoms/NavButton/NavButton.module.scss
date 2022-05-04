@@ -8,7 +8,6 @@
   text-transform: uppercase;
   padding: tools.rem(4) 0;
   color: $color-black;
-  letter-spacing: $letter-spacing-uppercase;
   overflow: hidden;
 
   &:after {
@@ -31,6 +30,7 @@
 
   &--cta {
     display: flex;
+    font-size: tools.rem(16);
     min-height: tools.rem(48);
     flex-direction: row;
     align-items: center;
