@@ -7,7 +7,7 @@
   text-decoration: none;
   text-transform: uppercase;
   padding: tools.rem(4) 0;
-  color: $color-black;
+  color: $color-dark;
   overflow: hidden;
 
   &:after {
@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: tools.rem(1.5);
-    background-color: $color-black;
+    background-color: $color-primary;
     opacity: 1;
     transform: translate3d(-110%, 0, 0);
     transition: all $transition;
@@ -34,9 +34,9 @@
     min-height: tools.rem(48);
     flex-direction: row;
     align-items: center;
-    background-color: $color-black;
-    color: $color-white;
-    border: tools.rem(3) solid $color-black;
+    background-color: $color-primary;
+    color: $color-light;
+    border: tools.rem(3) solid $color-primary;
     border-radius: tools.rem(50);
     cursor: pointer;
     padding: tools.rem(14.5) tools.rem(32);
@@ -46,15 +46,15 @@
     transition: all $transition;
 
     &:hover {
-      background-color: $color-white;
-      color: $color-black;
+      background-color: $color-light;
+      color: $color-primary;
       text-decoration: none;
     }
 
     &:focus {
       outline: none;
-      background-color: $color-white;
-      color: $color-black;
+      background-color: $color-light;
+      color: $color-primary;
     }
 
     &:hover:after,
