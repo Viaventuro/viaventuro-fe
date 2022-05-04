@@ -13,7 +13,7 @@ const Navigation = ({ navigation }) => {
           );
         })}
         <li className={styles['navigation__list__item']}>
-          <NavButton label="Contact" href="#contact" modCta />
+          <NavButton label="Contact" slug="#contact" modCta />
         </li>
       </ul>
     </nav>
