@@ -11,9 +11,7 @@ const ErrorBlock = ({ title, subTitle, ctaLabel, ctaLink }) => {
       <PageHead />
       <section className="vv-layout">
         <div className={styles['error-block']}>
-          <div className={styles['error-block__logo__wrapper']}>
-            <Icon icon={IconLogo} className={styles['error-block__logo']} />
-          </div>
+          <Icon icon={IconLogo} className={styles['error-block__logo']} />
 
           <Title title={title} modUppercase modCenter />
 

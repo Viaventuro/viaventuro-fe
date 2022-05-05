@@ -1,15 +1,30 @@
+//
 // ------------------ //
-// Raw Colors  //
+// Raw Colors         //
 // ------------------ //
 
-// Colors
-$color-white: #ffffff;
-$color-black: #000000;
+// Basic Colors
+$color-white: #fffdfc;
+$color-black: #1c1102;
 
+// Theme Colors
+$color-cactus: #537156;
+$color-gold: #a47a28;
+
+//
+// ------------------ //
+// Viaventuro Colors  //
+// ------------------ //
+$color-primary: $color-cactus;
+$color-secondary: $color-gold;
+$color-light: $color-white;
+$color-dark: $color-black;
+
+//
 // ------------------ //
 // Functional Colors  //
 // ------------------ //
-$color-bg: $color-white;
-$color-text: $color-black;
+$color-bg: $color-light;
+$color-text: $color-dark;
 $color-shadow: rgba(16, 4, 45, 0.2);
 $color-shadow-dark: rgba(26, 3, 41, 0.7);
