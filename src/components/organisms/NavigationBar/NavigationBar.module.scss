@@ -17,6 +17,11 @@
 }
 
 .navigation-bar__logo {
-  height: tools.rem(70);
+  height: tools.rem(60);
   color: $color-primary;
+  transition: color $transition;
+
+  &:hover {
+    color: $color-secondary;
+  }
 }
