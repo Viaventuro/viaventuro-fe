@@ -9,6 +9,7 @@
   width: 100vw;
   background: $color-light;
   box-shadow: 0 0 tools.rem(10) 0 $color-shadow;
+  transition: all $transition;
 
   &--visible {
     height: 100vh;
