@@ -32,6 +32,11 @@ const NavigationBar = ({}) => {
         visible && styles['navigation-bar--visible'],
       ])}
     >
+      <Link href="/" className={styles['navigation-bar__logo__mobile-wrapper']}>
+        <a>
+          <Icon modBlock icon={IconLogo} className={styles['navigation-bar__logo--mobile']} />
+        </a>
+      </Link>
       <span
         className={classNames([
           styles['navigation-bar__inner'],

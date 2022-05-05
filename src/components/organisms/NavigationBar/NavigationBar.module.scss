@@ -9,10 +9,12 @@
   width: 100vw;
   background: $color-light;
   box-shadow: 0 0 tools.rem(10) 0 $color-shadow;
-  transition: all $transition;
+  transition: height $transition;
 
-  &--visible {
-    height: 100vh;
+  @include tools.respond-up-to(large) {
+    &--visible {
+      height: 100vh;
+    }
   }
 
   @include tools.respond-from(large) {
@@ -30,14 +32,23 @@
   width: 100%;
   height: 100vh;
 
-  &--invisible {
-    display: none;
+  @include tools.respond-up-to(large) {
+    &--invisible {
+      display: none;
+    }
   }
 
   @include tools.respond-from(large) {
     position: relative;
     flex-direction: row;
     justify-content: space-between;
+    height: tools.rem(90);
+  }
+}
+
+.navigation-bar__logo__mobile-wrapper {
+  @include tools.respond-from(large) {
+    display: none;
   }
 }
 
@@ -49,10 +60,27 @@
   &:hover {
     color: $color-secondary;
   }
+
+  &--mobile {
+    height: tools.rem(60);
+    color: $color-primary;
+
+    @include tools.respond-from(large) {
+      display: none;
+    }
+  }
+
+  @include tools.respond-up-to(large) {
+    display: none;
+  }
 }
 
 .navigation-bar__toggle {
   position: absolute;
   top: 0;
   right: 0;
+
+  @include tools.respond-from(large) {
+    display: none;
+  }
 }
