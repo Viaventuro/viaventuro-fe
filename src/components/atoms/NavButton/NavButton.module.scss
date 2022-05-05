@@ -77,4 +77,8 @@
       transform: translate3d(0, 0.2em, 0);
     }
   }
+
+  @include tools.respond-up-to(large) {
+    margin: tools.rem(10) 0;
+  }
 }
