@@ -17,7 +17,7 @@
     "next": "12.1.5",
     "next-translate": "^1.4.0",
     "normalize.css": "^8.0.1",
-    "react": "18.0.0",
+    "react": "18.1.0",
     "react-datocms": "^3.0.12",
     "react-dom": "18.0.0",
     "yargs": "^17.4.1"
