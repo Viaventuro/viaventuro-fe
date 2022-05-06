@@ -1,7 +1,7 @@
 @use '../settings/' as *;
 
 a:not([class]) {
-  color: $color-black;
+  color: $color-text;
   outline: 0;
   text-decoration: none;
 

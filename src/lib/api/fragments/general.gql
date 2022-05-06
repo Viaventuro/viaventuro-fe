@@ -1,0 +1,13 @@
+fragment GeneralFields on GeneralRecord {
+  navigation {
+    ...NavigationHomeItem
+    ...NavigationCamperItem
+    ...NavigationFaqItem
+    ...NavigationAboutItem
+  }
+  footerNav {
+    ...NavigationCookiesItem
+    ...NavigationPrivacyItem
+    ...NavigationTermsItem
+  }
+}
