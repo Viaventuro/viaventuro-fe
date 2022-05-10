@@ -2,11 +2,11 @@ import NavButton from '@/components/atoms/NavButton';
 import { useRouter } from 'next/router';
 import styles from './Navigation.module.scss';
 
-const Navigation = ({ navigation }) => {
+const Navigation = ({ navigation, className }) => {
   const router = useRouter();
 
   return (
-    <nav>
+    <nav className={className}>
       <ul className={styles['navigation__list']}>
         {navigation.map((item, i) => {
           return (

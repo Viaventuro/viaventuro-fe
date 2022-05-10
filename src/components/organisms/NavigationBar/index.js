@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
-  const [visible, setVisible] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   const navigation = general?.navigation
     ? general.navigation.map((nav) => {
@@ -22,35 +22,43 @@ const NavigationBar = ({}) => {
     : [];
 
   const toggleNav = () => {
-    setVisible(!visible);
+    setNavOpen(!navOpen);
   };
 
   return (
     <header
       className={classNames([
         styles['navigation-bar'],
-        visible && styles['navigation-bar--visible'],
+        navOpen && styles['navigation-bar--visible'],
       ])}
     >
-      <Link href="/" className={styles['navigation-bar__logo__mobile-wrapper']}>
-        <a>
-          <Icon modBlock icon={IconLogo} className={styles['navigation-bar__logo--mobile']} />
-        </a>
-      </Link>
       <span
         className={classNames([
           styles['navigation-bar__inner'],
-          !visible && styles['navigation-bar__inner--invisible'],
+          !navOpen && styles['navigation-bar__inner--navClosed'],
           'vv-layout',
         ])}
       >
         <Link href="/">
           <a>
-            <Icon modBlock icon={IconLogo} className={styles['navigation-bar__logo']} />
+            <Icon
+              modBlock
+              icon={IconLogo}
+              className={classNames([
+                styles['navigation-bar__logo'],
+                navOpen && styles['navigation-bar__logo--navOpen'],
+              ])}
+            />
           </a>
         </Link>
 
-        <Navigation navigation={navigation} />
+        <Navigation
+          navigation={navigation}
+          className={classNames([
+            styles['navigation-nav'],
+            !navOpen && styles['navigation-bar__nav--invisible'],
+          ])}
+        />
       </span>
       <button onClick={toggleNav} className={styles['navigation-bar__toggle']}>
         nav
