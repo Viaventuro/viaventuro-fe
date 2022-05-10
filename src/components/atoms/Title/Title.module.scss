@@ -3,7 +3,7 @@
 
 .title {
   display: block;
-  color: $color-black;
+  color: $color-dark;
 
   @each $level, $size-info in $font-titles-map {
     &--#{$level} {
@@ -14,7 +14,7 @@
   }
 
   &--light {
-    color: $color-white;
+    color: $color-light;
   }
 
   &--center {

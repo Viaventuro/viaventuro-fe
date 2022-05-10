@@ -1,5 +1,6 @@
 import PageHead from '@/components/atoms/PageHead';
 import Footer from '@/components/organisms/Footer';
+import NavigationBar from '@/components/organisms/NavigationBar';
 
 const BaseLayout = ({ children, structuredData, page, slug }) => {
   const { seo, noindex = false, nofollow = false } = page;
@@ -13,6 +14,7 @@ const BaseLayout = ({ children, structuredData, page, slug }) => {
         noFollow={nofollow}
         slug={slug}
       />
+      {!page.hideNavigation && <NavigationBar />}
       <main className="main" id="main">
         {children}
       </main>
