@@ -1,0 +1,84 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
+.navbutton {
+  display: block;
+  position: relative;
+  font-size: tools.rem(18);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: tools.rem(1) 0;
+  color: $color-dark;
+  overflow: hidden;
+
+  &--inactive {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: tools.rem(2);
+      background-color: $color-primary;
+      transform: translate3d(-110%, 0, 0);
+      transition: all $transition;
+    }
+  }
+
+  &:hover:after,
+  &:focus:after {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &--active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: tools.rem(2);
+    background-color: $color-primary;
+    transition: all $transition;
+  }
+
+  &--cta {
+    display: flex;
+    font-size: tools.rem(16);
+    min-height: tools.rem(48);
+    flex-direction: row;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-light;
+    border: tools.rem(3) solid $color-primary;
+    border-radius: tools.rem(50);
+    cursor: pointer;
+    padding: tools.rem(12) tools.rem(26);
+    margin-left: tools.rem(10);
+    width: fit-content;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+    transition: all $transition;
+
+    &:hover {
+      background-color: $color-light;
+      color: $color-primary;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $color-light;
+      color: $color-primary;
+    }
+
+    &:hover:after,
+    &:hover:focus {
+      opacity: 0;
+      transform: translate3d(0, 0.2em, 0);
+    }
+  }
+
+  @include tools.respond-up-to(large) {
+    margin: tools.rem(10) 0;
+  }
+}

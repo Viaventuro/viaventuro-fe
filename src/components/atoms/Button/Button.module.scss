@@ -19,8 +19,7 @@
   width: fit-content;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-    color 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: background-color $transition;
   line-height: 1;
 
   span {
@@ -32,34 +31,34 @@
   }
 
   &--primary {
-    background-color: $color-black;
-    color: $color-white;
-    border: tools.rem(3) solid $color-black;
+    background-color: $color-primary;
+    color: $color-light;
+    border: tools.rem(3) solid $color-primary;
 
     &:hover {
-      background-color: $color-white;
-      color: $color-black;
+      background-color: $color-light;
+      color: $color-primary;
     }
 
     &:focus {
       outline: none;
-      background-color: $color-white;
-      color: $color-black;
+      background-color: $color-light;
+      color: $color-primary;
     }
   }
 
   &--light {
-    background-color: $color-white;
-    color: $color-black;
-    border: tools.rem(3) solid $color-black;
+    background-color: $color-light;
+    color: $color-primary;
+    border: tools.rem(3) solid $color-primary;
 
     &:hover {
-      background-color: $color-black;
-      color: $color-white;
+      background-color: $color-primary;
+      color: $color-light;
     }
 
     &:focus {
-      outline: tools.rem(2) solid $color-black;
+      outline: tools.rem(2) solid $color-primary;
     }
   }
 }
