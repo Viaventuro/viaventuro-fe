@@ -72,9 +72,8 @@
     }
 
     &:hover:after,
-    &:hover:focus {
-      opacity: 0;
-      transform: translate3d(0, 0.2em, 0);
+    &:focus:after {
+      background-color: transparent;
     }
   }
 
