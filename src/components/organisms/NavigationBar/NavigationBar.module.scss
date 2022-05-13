@@ -77,8 +77,8 @@
 
 .navigation-bar__toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: tools.rem(27);
+  right: tools.rem(20);
 
   @include tools.respond-from(large) {
     display: none;

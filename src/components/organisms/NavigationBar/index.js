@@ -7,6 +7,7 @@ import styles from './NavigationBar.module.scss';
 import Icon from '@/components/atoms/Icon';
 import { IconLogo } from '@/assets/icons';
 import Link from 'next/link';
+import Hamburger from '@/components/atoms/Hamburger';
 
 const NavigationBar = ({}) => {
   const { general } = useContext(GeneralContext);
@@ -60,9 +61,9 @@ const NavigationBar = ({}) => {
           ])}
         />
       </span>
-      <button onClick={toggleNav} className={styles['navigation-bar__toggle']}>
-        nav
-      </button>
+      <span className={styles['navigation-bar__toggle']}>
+        <Hamburger active={navOpen} onClick={toggleNav} />
+      </span>
     </header>
   );
 };
