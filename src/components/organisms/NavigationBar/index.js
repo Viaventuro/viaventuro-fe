@@ -1,7 +1,5 @@
-import { useContext } from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
-import { GeneralContext } from '@/context/GeneralContext';
 import Navigation from '@/components/molecules/Navigation';
 import styles from './NavigationBar.module.scss';
 import Icon from '@/components/atoms/Icon';
@@ -9,18 +7,8 @@ import { IconLogo } from '@/assets/icons';
 import Link from 'next/link';
 import Hamburger from '@/components/atoms/Hamburger';
 
-const NavigationBar = ({}) => {
-  const { general } = useContext(GeneralContext);
+const NavigationBar = ({ navigation }) => {
   const [navOpen, setNavOpen] = useState(false);
-
-  const navigation = general?.navigation
-    ? general.navigation.map((nav) => {
-        return {
-          label: nav.pageName,
-          slug: nav.slug,
-        };
-      })
-    : [];
 
   const toggleNav = () => {
     setNavOpen(!navOpen);
