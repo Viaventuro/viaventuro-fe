@@ -2,7 +2,6 @@ import gql from 'graphql-tag';
 import fetchApi from '@/api/datocms';
 
 import GENERAL_FRAGMENT from '../fragments/general.gql';
-import LANDING_BLOCK_FRAGMENT from '../fragments/landing-block.gql';
 import {
   GENERAL_HOME_NAVIGATION_FRAGMENT,
   GENERAL_CAMPER_NAVIGATION_FRAGMENT,
@@ -22,10 +21,9 @@ const PAGE_QUERY = gql`
   ${GENERAL_COOKIES_NAVIGATION_FRAGMENT}
   ${GENERAL_PRIVACY_NAVIGATION_FRAGMENT}
   ${GENERAL_TERMS_NAVIGATION_FRAGMENT}
-  ${LANDING_BLOCK_FRAGMENT}
 
-  query getHomepage($locale: SiteLocale!) {
-    homePage(locale: $locale) {
+  query getAboutpage($locale: SiteLocale!) {
+    aboutPage(locale: $locale) {
       id
       slug
       seo: _seoMetaTags {
@@ -36,10 +34,6 @@ const PAGE_QUERY = gql`
       noindex
       nofollow
       hideNavigation
-      content {
-        __typename
-        ...LandingBlock
-      }
     }
     general(locale: $locale) {
       ...GeneralFields
@@ -47,7 +41,7 @@ const PAGE_QUERY = gql`
   }
 `;
 
-export async function getHomePageData(locale, preview) {
+export async function getAboutPageData(locale, preview) {
   const response = await fetchApi(PAGE_QUERY, {
     variables: {
       locale: locale.replace('-', '_'),
@@ -55,7 +49,7 @@ export async function getHomePageData(locale, preview) {
     preview,
   });
 
-  if (!response.homePage) {
+  if (!response.aboutPage) {
     return null;
   }
 
