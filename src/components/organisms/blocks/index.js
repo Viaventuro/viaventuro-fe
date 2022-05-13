@@ -2,6 +2,11 @@ import dynamic from 'next/dynamic';
 
 const contentBlocksList = {
   LandingBlockRecord: dynamic(() => import('./LandingBlock')),
+  IntroBlockRecord: dynamic(() => import('./IntroBlock')),
+  HowDoesItWorkBlockRecord: dynamic(() => import('./HowDoesItWorkBlock')),
+  TarifsBlockRecord: dynamic(() => import('./TarifsBlock')),
+  SocialPostsBlockRecord: dynamic(() => import('./SocialPostsBlock')),
+  StatisticsBlockRecord: dynamic(() => import('./StatisticsBlock')),
 };
 
 export default function Blocks({ content, page }) {

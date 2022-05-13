@@ -9,9 +9,7 @@ const LandingBlock = ({ title, body, callToAction }) => {
   return (
     <section className="vv-layout">
       <div className={styles['landing-block']}>
-        <div className={styles['landing-block__logo__wrapper']}>
-          <Icon icon={IconLogo} className={styles['landing-block__logo']} />
-        </div>
+        <Icon modBlock icon={IconLogo} className={styles['landing-block__logo']} />
 
         <Title title={title} modUppercase modCenter />
 
