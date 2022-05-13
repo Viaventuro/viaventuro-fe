@@ -1,8 +1,8 @@
 import { getHomePageData } from '@/lib/api/home';
-import Blocks from '@/components/organisms/blocks';
 import BaseLayout from '@/layouts/base';
+import Blocks from '@/components/organisms/blocks';
 
-export default function Home({ data }) {
+export default function HomePage({ data }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
