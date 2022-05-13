@@ -42,7 +42,7 @@
 
   &--active {
     &:nth-child(1) {
-      transform: rotate(45deg);
+      transform: rotate(47deg);
       top: tools.rem(-3);
       left: tools.rem(8);
     }
@@ -53,7 +53,7 @@
     }
 
     &:nth-child(3) {
-      transform: rotate(-45deg);
+      transform: rotate(-47deg);
       top: tools.rem(19);
       left: tools.rem(8);
     }
