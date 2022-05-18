@@ -1,6 +1,9 @@
 // Source: https://nextjs.org/docs/advanced-features/preview-mode
+
+import { withSentry } from '@sentry/nextjs';
+
 // Has been greatly simplified
-export default async function preview(req, res) {
+preview = async (req, res) => {
   const { secret, slug = '', locale } = req.query;
 
   if (secret !== process.env.DATOCMS_PREVIEW_SECRET) {
@@ -23,4 +26,6 @@ export default async function preview(req, res) {
     </head>`,
   );
   res.end();
-}
+};
+
+export default withSentry(preview);
