@@ -1,5 +1,9 @@
-export default async function exit(req, res) {
+import { withSentry } from '@sentry/nextjs';
+
+const exit = async (req, res) => {
   res.clearPreviewData();
   res.writeHead(307, { Location: '/' });
   res.end();
-}
+};
+
+export default withSentry(exit);
