@@ -8,8 +8,8 @@ const PageHead = ({ seo, slug, noIndex, noFollow, path = '', structuredData }) =
   let metaTags = [...[], ...(seo && Object.keys(seo).length > 0 ? seo : [])];
 
   const robots = [
-    noIndex === true ? 'noindex' : undefined,
-    noFollow === true ? 'nofollow' : undefined,
+    noIndex === true ? 'noindex' : undefined || {},
+    noFollow === true ? 'nofollow' : undefined || {},
   ].filter((x) => x !== undefined);
 
   const { locale, defaultLocale } = useRouter();
