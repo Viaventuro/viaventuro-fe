@@ -35,16 +35,11 @@ export const getUrl = (locale, defaultLocale, path = '', slug = '', absolute = t
 export const getSiteUrl = () => {
   let url;
 
-  if (typeof window !== 'undefined') {
-    // Env variable "SITE_URL" is not defined, you are probably using this on the clientside, falling back to protocol + hostname
-    url = `${window.location.protocol}//${window.location.hostname}`;
+  if (!process.env.SITE_URL) {
+    // eslint-disable-next-line no-console
+    console.warn('No environment-variable SITE_URL');
   } else {
-    if (!process.env.SITE_URL) {
-      // eslint-disable-next-line no-console
-      console.warn('No environment-variable SITE_URL');
-    } else {
-      url = process.env.SITE_URL;
-    }
+    url = process.env.SITE_URL;
   }
 
   return url;
