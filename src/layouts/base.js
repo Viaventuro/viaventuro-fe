@@ -6,7 +6,7 @@ import NavigationBar from '@/components/organisms/NavigationBar';
 
 const BaseLayout = ({ children, structuredData, page, slug }) => {
   const { general } = useContext(GeneralContext);
-  const { seo, noindex = false, nofollow = false } = page;
+  const { seo = [], noindex = false, nofollow = false } = page;
 
   const navigation = general?.navigation
     ? general.navigation.map((nav) => {
