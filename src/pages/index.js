@@ -22,9 +22,9 @@ export default function HomePage({ data }) {
   };
 
   return (
-    // <BaseLayout structuredData={structuredData} page={data?.homePage}>
-    <Blocks content={data?.homePage?.content} />
-    // </BaseLayout>
+    <BaseLayout structuredData={structuredData} page={data?.homePage}>
+      <Blocks content={data?.homePage?.content} />
+    </BaseLayout>
   );
 }
 
