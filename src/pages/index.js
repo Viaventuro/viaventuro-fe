@@ -21,6 +21,8 @@ export default function HomePage({ data }) {
     url: 'https://www.viaventuro.be',
   };
 
+  console.log(data);
+
   return (
     <BaseLayout structuredData={structuredData} page={data?.homePage}>
       <Blocks content={data?.homePage?.content} />
