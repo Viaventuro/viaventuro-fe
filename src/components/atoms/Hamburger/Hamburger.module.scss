@@ -1,0 +1,61 @@
+@use '@/assets/sass/settings/' as *;
+@use '@/assets/sass/tools/' as tools;
+
+.hamburger {
+  background-color: none;
+  width: tools.rem(30);
+  height: tools.rem(30);
+  position: relative;
+  transform: rotate(0deg);
+  background-color: transparent;
+  border: none;
+  transition: all $transition;
+  cursor: pointer;
+}
+
+.hamburger__item {
+  display: block;
+  position: absolute;
+  height: tools.rem(5);
+  width: 100%;
+  background: $color-primary;
+  border-radius: tools.rem(9);
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all $transition;
+
+  &:nth-child(1) {
+    top: 0;
+    transform-origin: left center;
+  }
+
+  &:nth-child(2) {
+    top: tools.rem(10);
+    transform-origin: left center;
+  }
+
+  &:nth-child(3) {
+    top: tools.rem(21);
+    transform-origin: left center;
+  }
+
+  &--active {
+    &:nth-child(1) {
+      transform: rotate(47deg);
+      top: tools.rem(-3);
+      left: tools.rem(8);
+    }
+
+    &:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-47deg);
+      top: tools.rem(19);
+      left: tools.rem(8);
+    }
+  }
+}

@@ -6,5 +6,5 @@ module.exports = {
   pages: {
     '*': ['common', 'error'],
   },
-  loadLocaleFrom: (lang, ns) => import(`./src/locales/${lang}/${ns}.json`).then((m) => m.default),
+  loadLocaleFrom: (lang, ns) => require(`./src/locales/${lang}/${ns}.json`),
 };

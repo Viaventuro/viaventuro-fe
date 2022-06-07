@@ -1,8 +1,8 @@
 import { getHomePageData } from '@/lib/api/home';
-import Blocks from '@/components/organisms/blocks';
 import BaseLayout from '@/layouts/base';
+import Blocks from '@/components/organisms/blocks';
 
-export default function Home({ data }) {
+export default function HomePage({ data }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
@@ -20,6 +20,8 @@ export default function Home({ data }) {
     logo: 'https://www.viaventuro.be/assets/images/viaventuro.png',
     url: 'https://www.viaventuro.be',
   };
+
+  console.log(data);
 
   return (
     <BaseLayout structuredData={structuredData} page={data?.homePage}>

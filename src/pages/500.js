@@ -1,7 +1,7 @@
 import useTranslation from 'next-translate/useTranslation';
 import ErrorBlock from '@/components/molecules/ErrorBlock';
 
-const Index = ({}) => {
+const Index = () => {
   const { t } = useTranslation('error');
 
   return (

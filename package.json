@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-icons": "node ./script/generate-icons.js --inputFolder=./src/assets/icons/custom/ --outputFile=./src/assets/icons/index.js && npx eslint ./src/assets/icons/index.js --quiet --fix"
+    "generate-icons": "node ./script/generate-icons.js --inputFolder=./src/assets/icons/custom/ --outputFile=./src/assets/icons/index.js && npx eslint ./src/assets/icons/index.js --quiet --fix",
+    "preinstall": "npx only-allow yarn",
+    "postinstall": "yarn generate-icons"
   },
   "dependencies": {
+    "@sentry/nextjs": "^6.19.7",
     "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
     "graphql": "^16.3.0",
@@ -23,14 +26,14 @@
     "yargs": "^17.4.1"
   },
   "devDependencies": {
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.5",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
-    "sass": "^1.50.1",
+    "sass": "^1.51.0",
     "sass-loader": "12.6.0",
-    "stylelint": "^14.7.1",
+    "stylelint": "^14.8.2",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
