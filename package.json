@@ -12,7 +12,7 @@
     "postinstall": "yarn generate-icons"
   },
   "dependencies": {
-    "@sentry/nextjs": "^6.19.7",
+    "@sentry/nextjs": "^7.1.1",
     "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
     "graphql": "^16.3.0",
@@ -21,7 +21,7 @@
     "next-translate": "^1.4.0",
     "normalize.css": "^8.0.1",
     "react": "18.0.0",
-    "react-datocms": "^3.0.12",
+    "react-datocms": "^3.0.14",
     "react-dom": "18.0.0",
     "yargs": "^17.4.1"
   },
@@ -31,9 +31,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
-    "sass": "^1.51.0",
+    "sass": "^1.52.3",
     "sass-loader": "12.6.0",
-    "stylelint": "^14.8.2",
+    "stylelint": "^14.9.0",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
