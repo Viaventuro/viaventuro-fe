@@ -1929,10 +1929,10 @@ damerau-levenshtein@^1.0.7:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-datocms-listen@^0.1.7:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/datocms-listen/-/datocms-listen-0.1.8.tgz#167a08492ec7b0e4bc2bc3b8e9b7df98e0f118ac"
-  integrity sha512-oyf7vBPTdqRyf0OTgK8SUmmv7FGgqacJeX4KqP4VhJ8kBrToog7aMRudwdA+iHFS8fuOeiDDH/SMg0PPqNP3JQ==
+datocms-listen@^0.1.9:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/datocms-listen/-/datocms-listen-0.1.14.tgz#1cb362543b54861f5fbc3282eb9077e06626c42f"
+  integrity sha512-Ijd5fzQ1Y1EUiSwduvaPRN7a6Edh//c500/2MjDhgaKd+N+zGEy7rpJ/SVXX0TdYDhX0ssoC4FDms6sbR7k+eA==
 
 datocms-structured-text-generic-html-renderer@^2.0.1:
   version "2.0.4"
@@ -3610,15 +3610,16 @@ quick-lru@^4.0.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
   integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
 
-react-datocms@^3.0.14:
-  version "3.0.14"
-  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-3.0.14.tgz#13b94beb63139d75ae82c7237f2f2c3c4e452c83"
-  integrity sha512-Ya7uQpNf13/MS3L1KyWCEN8JEyHQI2hpS0GNQZ6HSaPIjgjSepE6XqZt5nyJM+4303DJ4Q9My945gXMQkw3CsA==
+react-datocms@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-4.0.6.tgz#738faf724474450d2207ffe49f1b573d00eee9bc"
+  integrity sha512-38VZioHiwe0czt3VXTrl6AaODzDxGDsxYcAY+gkb40v20lhWvmEIKl7z6VWSvNBZg+r6CTq0kD+Zj4lykcTWuA==
   dependencies:
-    datocms-listen "^0.1.7"
+    datocms-listen "^0.1.9"
     datocms-structured-text-generic-html-renderer "^2.0.1"
     datocms-structured-text-utils "^2.0.1"
     react-intersection-observer "^8.33.1"
+    react-string-replace "^1.1.0"
     universal-base64 "^2.1.0"
     use-deep-compare-effect "^1.6.1"
 
@@ -3639,6 +3640,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-string-replace@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-string-replace/-/react-string-replace-1.1.0.tgz#a3f7b458e697e77d70b0ea663caf38ab38f7cc17"
+  integrity sha512-N6RalSDFGbOHs0IJi1H611WbZsvk3ZT47Jl2JEXFbiS3kTwsdCYij70Keo/tWtLy7sfhDsYm7CwNM/WmjXIaMw==
 
 react@18.0.0:
   version "18.0.0"
